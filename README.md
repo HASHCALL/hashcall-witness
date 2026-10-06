@@ -2,9 +2,9 @@
 
 **Every Call. Unerased.**
 
-> **Status:** COMMITMENT PUBLISHED · OPENTIMESTAMPS PENDING BITCOIN CONFIRMATION
+**Status:** COMMITMENT PUBLISHED · BITCOIN TIMESTAMP VERIFIED
 
-HASHCALL committed to a specific state of its `DMA_v0.1` signals ledger before the First Formal Review.
+HASHCALL committed to a specific state of its `DMA_v0.1` signals ledger before the first formal review.
 
 ## Commitment
 
@@ -14,7 +14,7 @@ HASHCALL committed to a specific state of its `DMA_v0.1` signals ledger before t
 - **Ledger prefix SHA256:**  
   `aa0099c1ad6402f4a92e5b9508469ba6d6417a6c96bd31463ae506fe376466ef`
 
-## Canonical Commitment Record
+## Canonical commitment record
 
 The canonical commitment record is exactly **167 bytes**, ASCII / UTF-8 compatible, with **no trailing newline**:
 
@@ -28,65 +28,60 @@ HASHCALL PUBLIC PROOF v0.1 | DMA_v0.1 | 2026-10-05T17:55:24.437570Z | rows=432 |
 
 This exact record is the object submitted to OpenTimestamps.
 
-## What This Proves
+## What this proves
 
-This commitment identifies the exact first **693,811 bytes** of the HASHCALL signals ledger.
+This commitment identifies the exact first **693,811 bytes** of the HASHCALL signals ledger as captured at the self-reported time above.
 
-When those same bytes are disclosed, anyone can independently calculate SHA256 and compare the result with the published ledger-prefix hash.
+Once those same bytes are disclosed, anyone can independently calculate SHA256 and compare the result with the published ledger-prefix hash.
 
-A match shows that the disclosed prefix is byte-for-byte identical to the data committed to by this record.
+A match will show that the disclosed prefix is byte-for-byte identical to the data committed to by this record.
 
-## Supplementary Telegram Evidence
-
-Historical Telegram records provide additional corroboration for part of the committed ledger:
-
-- **213 of 432** committed signals have matching Telegram messages with server-recorded timestamps.
-- Among signals marked `shown=true`, **213 of 223** have matching Telegram evidence.
-- **No matched signal message was edited.**
-
-Telegram evidence is supplementary and does not replace the cryptographic ledger commitment.
-
-Absence of a Telegram message is not evidence that a signal was not issued.
-
-## What This Does Not Prove
+## What this does not prove
 
 This commitment is **not a performance claim**.
 
 It does not prove profitability, predictive accuracy, benchmark superiority, or any future review outcome.
 
-It does not, by itself, prove that signals recorded before this commitment were logged at their stated times, or that none were removed before it.
+It does not, by itself, prove that signals recorded before this commitment were logged at their stated times, or that none were removed before the commitment was made.
 
 It does not prove that future signals cannot be changed or deleted.
 
-It proves the integrity of the specific ledger prefix identified above **from the commitment point forward**.
+It proves only the integrity of the specific ledger prefix identified above from the commitment point forward.
 
-## Independent Timestamp
+## Independent timestamp
 
-The canonical 167-byte commitment record has been submitted to OpenTimestamps.
+The canonical 167-byte commitment record was submitted to OpenTimestamps, and the proof has since been upgraded with Bitcoin attestations.
 
-- **OpenTimestamps status:** `PENDING BITCOIN CONFIRMATION`
-- **Proof size:** `724 bytes`
-- **Proof SHA256:**  
+### Original proof
+
+- **Size:** `724 bytes`
+- **SHA256:**  
   `70e671b15a2c65b65f7a0116bf6c91fae0025d0fd77e42a35cdd799dc73e7cde`
 
-The exact `.ots` proof file is included in this directory.
+### Upgraded proof
 
-This page will not state **Bitcoin timestamp: VERIFIED** until a Bitcoin attestation is actually present.
+- **Status:** `BITCOIN TIMESTAMP VERIFIED`
+- **Size:** `3695 bytes`
+- **SHA256:**  
+  `a03c0de6456401d6076d9a157e834bad41f89322e3323ba7b9edec5bdc80d004`
 
-## Public Disclosure
+Bitcoin attestations are present in the upgraded proof.
+## Public disclosure
 
 The exact committed **693,811-byte ledger prefix** will be published **no later than 27 October 2026**.
 
 After disclosure, verification requires no proprietary HASHCALL software:
 
-1. Obtain the disclosed ledger prefix.
-2. Confirm its size is exactly `693811` bytes.
-3. Calculate SHA256.
-4. Compare it with:
+1. obtain the disclosed ledger prefix;
+2. confirm its size is exactly `693811` bytes;
+3. calculate SHA256;
+4. compare the result with:
 
 `aa0099c1ad6402f4a92e5b9508469ba6d6417a6c96bd31463ae506fe376466ef`
 
-## Commitment Chain
+## Commitment chain
+
+This is the genesis public-proof record.
 
 - **Commitment ID:** `HASHCALL-PUBLIC-PROOF-0001`
 - **Previous commitment record SHA256:** `GENESIS — NONE`
